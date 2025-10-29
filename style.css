@@ -46,11 +46,14 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1rem;
+    padding: 2rem 1rem;
     z-index: 999;
 }
 
 header h1{
+    position: fixed;
+    top: 1%;
+    left: 0%;
     margin: 0;
     font-size: 3rem;
     font-weight: 300;
@@ -80,7 +83,7 @@ nav a:hover{
 
 .btn-contact{
     position: fixed;
-    top: 1.4rem;
+    top: 23%;
     right: 3rem;
     background-color: rgb(187, 208, 226);
     color: #000;
@@ -111,10 +114,12 @@ main{
 }
 
 .tag-box{
-    position: relative;
-    width: 18rem;
+    position: absolute;
+    top: 48%;
+    left: 11%;
+    width: 15rem;
     height: 2.5rem;
-    border-radius: 50px;
+    border-radius: 100px;
     background: linear-gradient(to right, rgb(255, 0, 0), rgb(208, 0, 255), rgb(255, 174, 0), rgb(0, 255, 128), rgb(255, 255, 0), rgb(255, 0, 0));
     background-size: 200%;
     animation: animationGradient 3s linear infinite;
@@ -143,25 +148,106 @@ main{
 }
 
 h1 {
+  position: absolute;
+  top: 30%;
   font-size: 3rem;
   font-weight: 600;
   letter-spacing: 0.1em;
-  margin: 2rem 0;
+  margin: 0rem 0;
   line-height: 1.2;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
+/* h5 instead of h1 */
+h5 {
+  position: absolute;
+    top: 30%;
+    left: 11%;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin: 0rem 0;
+  line-height: 1.2;
+}
+
+
 .description {
+  position: absolute;
+    top: 40%;
+    left: 11%;  
   font-size: 1.2rem;
   letter-spacing: 0.05em;
   max-width: 35rem;
   color: #aaa;
 }
 
+
+h2 {
+  position: absolute;
+  top: 65%;
+  left: 16%;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin: 0.1rem 0;
+  line-height: 1.2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.sub-description1 {
+  position: absolute;
+  top: 73%;
+  left: 14%;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  color: #aaa;
+}
+
+h3 {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin: 0.1rem 0;
+  line-height: 1.2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.sub-description2 {
+  position: absolute;
+  top: 73%;
+  left: 47%;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  color: #aaa;
+}
+
+h4 {
+  position: absolute;
+  top: 65%;
+  left: 79%;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin: 0.1rem 0;
+  line-height: 1.2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.sub-description3 {
+  position: absolute;
+  top: 73%;
+  left: 78.5%;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  color: #aaa;
+}
+
 .robot-3d{
-    scale: 0.8;
+    scale: 1.2;
     position: absolute;
-    top: 0;
+    top: -12%;
     right: -35%;
     z-index: -999;
 }
@@ -169,7 +255,7 @@ h1 {
 /* Responsive Design tab */
 @media (max-width: 1100px) {
   header {
-    padding: 1rem 0.5rem;
+    padding: 2rem 0.5rem;
     font-size: 90%;
   }
   header h1{
@@ -177,8 +263,10 @@ h1 {
   }
   
     nav {
-        scale: 0.9;
-        gap: 1rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        scale: 1;
     }
 
   .content {
@@ -186,17 +274,15 @@ h1 {
   }
 
   .robot-3d {
-    transform: scale(0.95);
-    top: -20%;
-    right: 2%;
+    display: none;
   }
 }
 
 /* Responsive Design small tab */
 @media (max-width: 900px) {
     nav {
-        scale: 0.75;
-        gap: 0.5rem;
+        display: none;
+
     }
     header h1{
         font-size: 2.5rem;
@@ -213,24 +299,30 @@ h1 {
     }
 
     .robot-3d {
-        transform: scale(0.85);
-        top: -22%;
-        right: 0;
+        display: none;
     }
 }
 
 /* Responsive Design mobile */
 @media (max-width: 768px) {
     header{
-        padding: 1rem 0.1rem;
-        scale : 0.9;
+        padding: 2rem 0.1rem;
+        scale : 1;
     }
     nav {
         display: none;
     }
     
+    .robot-3d {
+        display: none;
+    }
+
     header h1{
+        position: absolute;
+        top: 35%;
+        left: -5%;
         font-size: 2rem;
+
     }
     .btn-contact{
         scale: 0.9;
@@ -246,15 +338,73 @@ h1 {
     .content h1 {
         font-size: 2.5rem;
     }
+
+    h5 {
+        position: absolute;
+        top: 15%;
+        left: 11%;
+        font-size: rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        margin: 0rem 0;
+        line-height: 1.2;
+    }
+
     .description {
-        font-size: 1rem;
-        max-width: 20rem;
+          position: absolute;
+          top: 32%;
+          left: 11%;  
+          font-size: 1rem;
+          max-width: 20rem;
     }
-    .robot-3d {
-        transform: scale(0.7);
-        top: -25%;
-        right: 0;
+    .tag-box{
+        position: absolute;
+        top: 41%;
+        left: 11%;
     }
+    
+    h2 {
+      position: absolute;
+      top: 55%;
+      left: 11%;
+      font-size: 1.8rem;
+    }
+    
+    .sub-description1 {
+      position: absolute;
+      top: 60%;
+      left: 6.5%;
+      font-size: 0.9rem;
+    }
+    
+    h3 {
+      position: absolute;
+      top: 55%;
+      left: 45%;
+      font-size: 1.8rem;
+    }
+
+    .sub-description2 {
+      position: absolute;
+      top: 60%;
+      left: 36.5%;
+      font-size: 0.9rem;
+    }
+
+    h4 {
+      position: absolute;
+      top: 55%;
+      left: 68%;
+      font-size: 1.8rem;
+    }
+
+    .sub-description3 {
+      position: absolute;
+      top: 60%;
+      left: 67.5%;
+      font-size: 0.9rem;
+    }
+
 }
 
 .header{
@@ -264,3 +414,4 @@ h1 {
     backdrop-filter: blur(10px);
     z-index: 999;
 }
+
