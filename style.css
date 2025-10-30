@@ -51,6 +51,16 @@ header{
     z-index: 999;
 }
 
+.header{
+    position: fixed;
+    width: 100%;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    z-index: 999;
+}
+
+
+
 header h1{
     position: fixed;
     top: 1%;
@@ -253,6 +263,62 @@ h4 {
     z-index: -999;
 }
 
+/* Logos Slider Animation */
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  width: 100%;  
+  overflow: hidden;
+  padding: 60px 0;
+  background: rgb(0, 0, 0);
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(0, 0, 0));
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 50px;
+  margin: 0 40px;
+}
+
+.pepe{
+    position: absolute;
+    top: 70%;
+    width: 100%;
+    height: auto;
+}
+
 /* Responsive Design tab */
 @media (max-width: 1100px) {
   header {
@@ -274,9 +340,7 @@ h4 {
     margin-top: 45%;
   }
 
-  .robot-3d {
-    display: none;
-  }
+
 }
 
 /* Responsive Design small tab */
@@ -384,7 +448,7 @@ h4 {
     h3 {
       position: absolute;
       top: 53%;
-      left: 45%;
+      left: 44%;
       font-size: 1.7rem;
     }
 
@@ -410,15 +474,25 @@ h4 {
     }
 
     .container{
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
+       max-width: 100%;
+       height: auto;
+       margin: 0 auto;
+    }
+
+    .pepe{
+       position: absolute;
+       top: 50%;
+       width: 100%;
+       height: auto;
+    }
+    .logos:after {
+        width: 130px;
     }
 }
 
 
 /* Responsive Design small mobile */
-@media (max-width: 380px) {
+@media (max-width: 390px) {
     header{
         padding: 2rem 0.1rem;
         scale : 1;
@@ -523,19 +597,20 @@ h4 {
     }
 
     .container{
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
+       max-width: 100%;
+       height: auto;
+       margin: 0 auto;
     }
-}
 
+    .pepe{
+       position: absolute;
+       top: 50%;
+       width: 100%;
+       height: auto;
+    }
 
-
-.header{
-    position: fixed;
-    width: 100%;
-    background: transparent;
-    backdrop-filter: blur(10px);
-    z-index: 999;
+    .logos:after {
+       width: 130px;
+    }
 }
 
