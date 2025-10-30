@@ -276,7 +276,7 @@ h4 {
 .logos {
   width: 100%;  
   overflow: hidden;
-  padding: 60px 0;
+  padding: 10px 0;
   background: rgb(0, 0, 0);
   white-space: nowrap;
   position: relative;
@@ -317,6 +317,7 @@ h4 {
     top: 70%;
     width: 100%;
     height: auto;
+    z-index: -2;
 }
 
 /* Responsive Design tab */
@@ -481,12 +482,12 @@ h4 {
 
     .pepe{
        position: absolute;
-       top: 50%;
+       top: 55%;
        width: 100%;
        height: auto;
     }
     .logos:after {
-        width: 130px;
+       width: 50%;
     }
 }
 
@@ -604,13 +605,13 @@ h4 {
 
     .pepe{
        position: absolute;
-       top: 50%;
+       top: 55%;
        width: 100%;
        height: auto;
     }
 
     .logos:after {
-       width: 130px;
+       width: 50%;
     }
 }
 
